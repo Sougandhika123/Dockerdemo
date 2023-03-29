@@ -15,3 +15,4 @@ pipeline {
     def tag = bat 'git rev-parse HEAD', returnStdout: true
     return tag
   }
+}
