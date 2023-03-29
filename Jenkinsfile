@@ -5,7 +5,7 @@ pipeline {
   stages{
     stage('Build Docker image'){
       steps{
-        sh "docker build . -t sougandhika/ubuntu:${Docker_Tag}"
+        bat "docker build . -t sougandhika/ubuntu:${Docker_Tag}"
       }
     }
   }
