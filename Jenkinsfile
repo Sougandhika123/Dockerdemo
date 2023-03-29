@@ -5,12 +5,12 @@ pipeline {
   stages{
     stage('Build Docker image'){
       steps{
-        sh "docker build . -t sougandhika/ubuntu:${Docker_Tag}"
+       bat "docker build . -t sougandhika/ubuntu:${Docker_Tag}"
       }
     }
   }
   def getDockerTag(){
-    def tag = sh script 'git rev-parse HEAD', returnStdout: true
+    def tag = bat 'git rev-parse HEAD', returnStdout: true
     return tag
   }
 
